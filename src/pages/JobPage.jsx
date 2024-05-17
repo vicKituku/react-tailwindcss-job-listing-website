@@ -122,7 +122,9 @@ const JobPage = ({ deleteJob }) => {
   );
 };
 const jobLoader = async ({ params }) => {
-  const res = await fetch(`/api/jobs/${params.id}`);
+  const res = await fetch(
+    `https://fastapi-joblisting-api.onrender.com/jobs/${params.id}`
+  );
   const data = await res.json();
   return data;
 };
