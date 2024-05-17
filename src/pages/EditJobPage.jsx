@@ -4,18 +4,17 @@ import { toast } from "react-toastify";
 
 const EditJobPage = ({ updatedJobSubmit }) => {
   const job = useLoaderData();
-  console.log(job);
   const [title, setTitle] = useState(job.title);
   const [type, setType] = useState(job.type);
   const [location, setLocation] = useState(job.location);
   const [description, setDescription] = useState(job.description);
   const [salary, setSalary] = useState(job.salary);
-  const [companyName, setCompanyName] = useState(job.company.name);
+  const [companyName, setCompanyName] = useState(job.companyName);
   const [companyDescription, setCompanyDescription] = useState(
-    job.company.description
+    job.companyDescription
   );
-  const [contactEmail, setContactEmail] = useState(job.company.contactEmail);
-  const [contactPhone, setContactPhone] = useState(job.company.contactPhone);
+  const [contactEmail, setContactEmail] = useState(job.contactEmail);
+  const [contactPhone, setContactPhone] = useState(job.contactPhone);
 
   const navigate = useNavigate();
   const { id } = useParams();
@@ -28,12 +27,10 @@ const EditJobPage = ({ updatedJobSubmit }) => {
       location,
       description,
       salary,
-      company: {
-        name: companyName,
-        description: companyDescription,
-        contactEmail,
-        contactPhone,
-      },
+      companyName,
+      companyDescription,
+      contactEmail,
+      contactPhone,
     };
     updatedJobSubmit(updatedJob);
     toast.success("Job Listing updated successfully!");

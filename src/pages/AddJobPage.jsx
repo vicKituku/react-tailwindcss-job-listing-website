@@ -21,12 +21,10 @@ const AddJobPage = ({ addJobSubmit }) => {
       location,
       description,
       salary,
-      company: {
-        name: companyName,
-        description: companyDescription,
-        contactEmail,
-        contactPhone,
-      },
+      companyName,
+      companyDescription,
+      contactEmail,
+      contactPhone,
     };
     addJobSubmit(newJob);
     toast.success("Job Listing added successfully!");

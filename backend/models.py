@@ -1,4 +1,4 @@
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, Integer, String
 from database import Base
 
 class Listings(Base):
@@ -10,13 +10,7 @@ class Listings(Base):
     description = Column(String)
     location = Column(String)
     salary = Column(String)
-    company = Column(Integer, ForeignKey("companies.id"))
-
-class Companies(Base):
-    __tablename__ = 'companies'
-    
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String)
-    description = Column(String)
+    companyName = Column(String)
+    companyDescription = Column(String)
     contactEmail = Column(String)
     contactPhone = Column(String)
