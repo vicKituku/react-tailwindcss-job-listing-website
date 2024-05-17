@@ -8,7 +8,9 @@ function JobListings({ isHome = false }) {
 
   useEffect(() => {
     const fetchJobs = async () => {
-      const apiUrl = isHome ? "/api/jobs?limit=3" : "/api/jobs";
+      const apiUrl = isHome
+        ? "https://fastapi-joblisting-api.onrender.com/jobs?limit=3"
+        : "https://fastapi-joblisting-api.onrender.com/jobs";
       try {
         const res = await fetch(apiUrl);
         const data = await res.json();

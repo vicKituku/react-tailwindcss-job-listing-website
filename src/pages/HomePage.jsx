@@ -25,7 +25,6 @@ const HomePage = () => {
       <HomeCards />
       <JobListings isHome={true} />
       <ViewAllJobs />
-      {health}
     </>
   );
 };

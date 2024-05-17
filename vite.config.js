@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": "https://fastapi-joblisting-api.onrender.com/",
+      "/api": "https://fastapi-joblisting-api.onrender.com",
       // {
       //   target: "https://fastapi-joblisting-api.onrender.com/",
       //   changeOrigin: true,
