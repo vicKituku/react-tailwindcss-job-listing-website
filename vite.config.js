@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target: "https://fastapi-joblisting-api.onrender.com",
+        target: "https://fastapi-joblisting-api.onrender.com/",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
